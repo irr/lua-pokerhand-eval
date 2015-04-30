@@ -5,8 +5,6 @@ if not ok then
     bit = require 'bit.numberlua'.bit
 end
 
-local math = math
-local require = require
 local setmetatable = setmetatable
 
 module('holdem.lookup')
@@ -15,7 +13,7 @@ _VERSION = '0.01'
 
 PopCountTable16 = {}
 
-local n = math.pow(2, 16) - 1
+local n = 2 ^ 16 - 1
 for i = 0, n do
     PopCountTable16[i] = 0
 end
