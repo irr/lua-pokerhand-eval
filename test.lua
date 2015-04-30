@@ -1,5 +1,3 @@
-__ = require "underscore" 
-
 card = require "holdem.card"
 lookup = require "holdem.lookup"
 analysis = require "holdem.analysis"
