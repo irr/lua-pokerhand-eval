@@ -1,6 +1,9 @@
 local card = require "holdem.card"
 
-local bit = require 'bit.numberlua'.bit
+local ok, bit = pcall(require, "bit")
+if not ok then
+    bit = require 'bit.numberlua'.bit
+end
 
 local math = math
 local require = require

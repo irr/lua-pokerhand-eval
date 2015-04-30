@@ -3,7 +3,11 @@ local lookup = require "holdem.lookup"
 local prob = require "holdem.prob"
 
 local __ = require "underscore"
-local bit = require 'bit.numberlua'.bit
+
+local ok, bit = pcall(require, "bit")
+if not ok then
+    bit = require 'bit.numberlua'.bit
+end
 
 local error = error
 local pairs = pairs
