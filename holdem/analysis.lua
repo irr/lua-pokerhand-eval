@@ -11,28 +11,10 @@ end
 
 local error = error
 local pairs = pairs
-local print = print
 local table = table
 local type = type
 
 module('holdem.analysis')
-
-function d(o)
-    if type(o) == "table" then
-        if o.SUIT_TO_STRING then
-            print("...", o:tostring())
-        else
-            for k, v in pairs(o) do
-                print(k,v)
-                if type(v) == "table" then
-                    d(v)
-                end
-            end
-        end
-    else 
-        print(o)
-    end
-end
 
 local function card_to_binary5(card)
     local b_mask = bit.lshift(1, (14 + card.rank))
