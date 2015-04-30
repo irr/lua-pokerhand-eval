@@ -22,6 +22,10 @@ end
 d(hand)
 print(analysis.evaluate(hand, {}))
 
+board = { card.Card(10, 2), card.Card(14, 2), card.Card(13, 2)  }
+d(hand, board)
+print(analysis.evaluate(hand, board))
+
 board = { card.Card(10, 2), card.Card(14, 2), card.Card(13, 2), card.Card(7, 2) }
 d(hand, board)
 print(analysis.evaluate(hand, board))
